@@ -7,7 +7,7 @@ import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
 PUBLIC_DIRS = {'.codex-plugin', 'skills', 'scripts', 'web', 'vendor', 'assets', 'tests', 'distribution'}
-PUBLIC_FILES = {'README.md', 'LICENSE', 'PRIVACY.md', 'THIRD_PARTY_NOTICES.md', 'CHANGELOG.md', 'VERIFICATION.md'}
+PUBLIC_FILES = {'README.md', 'LICENSE', 'PRIVACY.md', 'THIRD_PARTY_NOTICES.md', 'CHANGELOG.md', 'VERIFICATION.md', 'TERMS.md', 'SUPPORT.md'}
 
 
 def public_files(root):

@@ -1,6 +1,6 @@
 {
   "name": "scheduled-calendar",
-  "version": "0.1.0-beta.1",
+  "version": "0.1.0-beta.2",
   "description": "以周、月和日程查看 Codex 本地定时任务。",
   "author": {
     "name": "Edge",
@@ -25,7 +25,12 @@
     "brandColor": "#487652",
     "screenshots": [
       "./assets/calendar-demo.png"
-    ]
+    ],
+    "websiteURL": "https://github.com/qmkCamel/scheduled-calendar",
+    "privacyPolicyURL": "https://github.com/qmkCamel/scheduled-calendar/blob/main/plugins/scheduled-calendar/PRIVACY.md",
+    "termsOfServiceURL": "https://github.com/qmkCamel/scheduled-calendar/blob/main/plugins/scheduled-calendar/TERMS.md",
+    "logo": "./assets/logo.svg",
+    "composerIcon": "./assets/logo.svg"
   },
   "license": "MIT",
   "keywords": [
