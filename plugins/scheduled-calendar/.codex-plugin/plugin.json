@@ -24,7 +24,8 @@
     ],
     "brandColor": "#487652",
     "screenshots": [
-      "./assets/calendar-demo.png"
+      "./assets/calendar-demo-en.png",
+      "./assets/calendar-demo-zh-CN.png"
     ],
     "websiteURL": "https://github.com/qmkCamel/scheduled-calendar",
     "privacyPolicyURL": "https://github.com/qmkCamel/scheduled-calendar/blob/main/plugins/scheduled-calendar/PRIVACY.md",

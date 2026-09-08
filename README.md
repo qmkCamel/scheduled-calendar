@@ -6,7 +6,7 @@
 
 [Download preview](https://github.com/qmkCamel/scheduled-calendar/releases) · [Usage guide (Chinese)](plugins/scheduled-calendar/README.md) · [Privacy](plugins/scheduled-calendar/PRIVACY.md) · [Report an issue](https://github.com/qmkCamel/scheduled-calendar/issues)
 
-![Month view with synthetic demo tasks](plugins/scheduled-calendar/assets/calendar-demo.png)
+![Month view with synthetic demo tasks](plugins/scheduled-calendar/assets/calendar-demo-en.png)
 
 ## Features
 
@@ -18,7 +18,7 @@
 
 ## Installation
 
-**Preview requirements: macOS, Python 3.11+, and a plugin-capable Codex CLI/desktop app.** The calendar UI is currently in Simplified Chinese.
+**Preview requirements: macOS, Python 3.11+, and a plugin-capable Codex CLI/desktop app.** The calendar supports English and Simplified Chinese. It follows your browser’s primary language (other languages fall back to English); use the language menu to override it. The preference is saved for the current browser origin. Task names and instructions stay in their original language. This language support is available in the source checkout; the pinned v0.1.0-beta.1 release below still has the Chinese-only UI.
 
 ```sh
 codex plugin marketplace add qmkCamel/scheduled-calendar --ref v0.1.0-beta.1
@@ -56,6 +56,7 @@ This is an independent community project, unaffiliated with OpenAI. It has not b
 
 ```sh
 python3 -m unittest discover -s plugins/scheduled-calendar/tests -v
+node --test plugins/scheduled-calendar/tests/test_i18n.cjs
 python3 plugins/scheduled-calendar/scripts/build_release.py --output dist
 ```
 

@@ -64,6 +64,7 @@ class Handler(BaseHTTPRequestHandler):
                 return self.json(500, {'error': '读取任务失败，请稍后刷新。'})
         files = {'/': ('index.html', 'text/html; charset=utf-8'),
                  '/app.js': ('app.js', 'text/javascript; charset=utf-8'),
+                 '/i18n.js': ('i18n.js', 'text/javascript; charset=utf-8'),
                  '/style.css': ('style.css', 'text/css; charset=utf-8')}
         if url.path not in files:
             return self.json(404, {'error': 'Not found'})

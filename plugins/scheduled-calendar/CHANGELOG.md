@@ -1,5 +1,12 @@
 # Changelog
 
+## Unreleased
+
+- Add English and Simplified Chinese UI, browser-language detection, and a persistent manual language selector.
+- Localize dates, system messages, task details, and task-management requests; keep user task text unchanged.
+- Add matching synthetic screenshots for English and Chinese README files.
+- 新增中英文界面、浏览器语言识别与手动切换；更新两版 README 的真实演示截图。
+
 ## 0.1.0-beta.2 — 提审材料
 
 - 增加日历 Logo、使用条款、支持说明和公开链接。

@@ -72,4 +72,8 @@ python3 -m unittest discover -s tests -v
 
 Scheduled Calendar is an experimental, read-only calendar for existing **local Codex automations**. It provides week/month/agenda views, search, status filters, task details, and automatic refresh. No task migration or model API key is needed. The UI is currently Simplified Chinese.
 
-This preview targets macOS with Python 3.11+. It opens a standalone loopback browser panel, does not replace Codex's native Scheduled page, and does not support cloud tasks. Its adapter reads internal Codex files and may need updates when Codex changes. Recurrence dates are estimates, not proof of execution. See the privacy policy and verification record before sharing real task content with an AI/browser host.
+This preview targets macOS with Python 3.11+. It opens a standalone loopback browser panel, does not replace Codex's native Scheduled page, and does not support cloud tasks. The source checkout supports English and Simplified Chinese UI, following the browser’s primary language with an English fallback and a manual override. The published v0.1.0-beta.1 remains Chinese-only. Its adapter reads internal Codex files and may need updates when Codex changes. Recurrence dates are estimates, not proof of execution. See the privacy policy and verification record before sharing real task content with an AI/browser host.
+
+## 界面语言（当前源码）
+
+界面支持 English / 简体中文，默认跟随浏览器首选语言，其他语言回退英文。右上角菜单可手动切换，偏好保存在当前浏览器来源中；更换服务端口或浏览器可能需要重新选择。真实任务名称和正文保留原文。已发布的 v0.1.0-beta.1 安装包仍为中文界面。

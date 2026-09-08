@@ -6,7 +6,7 @@
 
 [下载预览版](https://github.com/qmkCamel/scheduled-calendar/releases) · [使用说明](plugins/scheduled-calendar/README.md) · [隐私说明](plugins/scheduled-calendar/PRIVACY.md) · [反馈问题](https://github.com/qmkCamel/scheduled-calendar/issues)
 
-![月视图，使用虚构演示数据](plugins/scheduled-calendar/assets/calendar-demo.png)
+![月视图，使用虚构演示数据](plugins/scheduled-calendar/assets/calendar-demo-zh-CN.png)
 
 ## 能做什么
 
@@ -18,7 +18,7 @@
 
 ## 安装
 
-**预览版要求：macOS、Python 3.11+、支持插件的 Codex CLI/桌面应用。** 界面目前为简体中文。
+**预览版要求：macOS、Python 3.11+、支持插件的 Codex CLI/桌面应用。** 界面支持英文和简体中文，默认跟随浏览器首选语言（其他语言回退英文），可从顶部语言菜单手动切换；偏好保存在当前浏览器来源中。任务名称与正文保留原文。双语功能已在当前源码中实现；下方固定安装的 v0.1.0-beta.1 发行版仍为中文界面。
 
 ```sh
 codex plugin marketplace add qmkCamel/scheduled-calendar --ref v0.1.0-beta.1
@@ -56,6 +56,7 @@ python3 plugins/scheduled-calendar/scripts/launch.py
 
 ```sh
 python3 -m unittest discover -s plugins/scheduled-calendar/tests -v
+node --test plugins/scheduled-calendar/tests/test_i18n.cjs
 python3 plugins/scheduled-calendar/scripts/build_release.py --output dist
 ```
 
