@@ -1,0 +1,26 @@
+{
+  "before": {
+    "automations/demo-0/automation.toml": "2b5301cee70e9da16cf70b7364fe15e80866f4edb49c7ff9509fd81231c5d71c",
+    "automations/demo-1/automation.toml": "c4849b02da562bcb9b1427d61728790d2e392d989bd487d742d39d5f99dce5f8",
+    "automations/demo-2/automation.toml": "65728f94990f60d77f05ce0a030b123a7ba44501db24841cebf88a60746983d8",
+    "automations/demo-3/automation.toml": "f1e1b9f5d35cb9fb56cccbb21622a9738f08c634ba7cf79bf2fd3168581f3e6a",
+    "automations/demo-4/automation.toml": "d36a7c7fbdb0136aa0e5a2cd5a2295f19ce813b34efb3ce50178bc74a26ab0e3",
+    "automations/demo-5/automation.toml": "83c34aac42c6f15d7c39f553abdf21d16aa24a5346a3a28e7f0cd6927bc8f2e7",
+    "automations/demo-6/automation.toml": "fb3ca75b95b80681deb0803566ac2a9bf43604816d3338292ca02466b4c92855",
+    "automations/demo-7/automation.toml": "e46c5724e847cc7d6292ec4bcb856d002a5af2dddb4df37f45e2eec813c4bc0c",
+    "automations/demo-8/automation.toml": "82a1ab2ca9ee252cb56035f4e644adb67a59ec027502afcbf2fed63dfb2da469"
+  },
+  "after": {
+    "automations/demo-8/automation.toml": "82a1ab2ca9ee252cb56035f4e644adb67a59ec027502afcbf2fed63dfb2da469",
+    "automations/demo-6/automation.toml": "fb3ca75b95b80681deb0803566ac2a9bf43604816d3338292ca02466b4c92855",
+    "automations/demo-1/automation.toml": "c4849b02da562bcb9b1427d61728790d2e392d989bd487d742d39d5f99dce5f8",
+    "automations/demo-0/automation.toml": "2b5301cee70e9da16cf70b7364fe15e80866f4edb49c7ff9509fd81231c5d71c",
+    "automations/demo-7/automation.toml": "e46c5724e847cc7d6292ec4bcb856d002a5af2dddb4df37f45e2eec813c4bc0c",
+    "automations/demo-2/automation.toml": "65728f94990f60d77f05ce0a030b123a7ba44501db24841cebf88a60746983d8",
+    "automations/demo-5/automation.toml": "83c34aac42c6f15d7c39f553abdf21d16aa24a5346a3a28e7f0cd6927bc8f2e7",
+    "automations/demo-4/automation.toml": "d36a7c7fbdb0136aa0e5a2cd5a2295f19ce813b34efb3ce50178bc74a26ab0e3",
+    "automations/demo-3/automation.toml": "f1e1b9f5d35cb9fb56cccbb21622a9738f08c634ba7cf79bf2fd3168581f3e6a"
+  },
+  "injection_marker_files": 0,
+  "final_service_running": false
+}

@@ -16,10 +16,12 @@ def build(output, root=ROOT):
         if (root / name).exists():
             raise ValueError(f'Skills-only submission cannot include {name}')
     # Directory screenshots are not supported by the Skills-only upload route.
-    manifest['interface'].pop('screenshots', None)
+    screenshots = {p.removeprefix('./') for p in manifest['interface'].pop('screenshots', [])}
+    screenshots.add('assets/calendar-demo.png')  # Legacy unreferenced demo image.
+    branding = {manifest['interface'].get(field, '').removeprefix('./') for field in ('logo', 'logoDark', 'composerIcon')}
     entries = {}
     for path, relative in public_files(root):
-        if relative.startswith('distribution/') or relative == 'assets/calendar-demo.png':
+        if relative.startswith('distribution/') or relative in screenshots - branding:
             continue
         entries[relative] = path.read_bytes()
     entries['.codex-plugin/plugin.json'] = (json.dumps(manifest, ensure_ascii=False, indent=2) + '\n').encode()

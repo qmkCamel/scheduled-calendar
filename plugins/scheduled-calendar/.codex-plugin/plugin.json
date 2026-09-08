@@ -1,6 +1,6 @@
 {
   "name": "scheduled-calendar",
-  "version": "0.1.0-beta.2",
+  "version": "0.1.0-beta.3",
   "description": "以周、月和日程查看 Codex 本地定时任务。",
   "author": {
     "name": "Edge",
@@ -10,7 +10,7 @@
   "interface": {
     "displayName": "定时任务日历",
     "shortDescription": "把 Codex 的定时任务放进日历",
-    "longDescription": "周视图、月视图、任务详情、搜索和状态筛选。读取真实本地任务与调度时间，每 30 秒刷新。在 Codex 浏览器面板打开；云端任务尚未接入。",
+    "longDescription": "用周、月和日程查看 Codex 本地任务，支持搜索、状态筛选及中英文界面。要求 macOS、Python 3.11+；在独立本地浏览器页面打开，每 30 秒刷新。只读任务数据，不执行或修改任务；会启动本地服务，关闭页面不会停止服务。云端任务未接入。",
     "developerName": "Edge",
     "category": "Productivity",
     "capabilities": [

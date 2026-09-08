@@ -4,11 +4,11 @@
 
 ## 解压与准备
 
-从构建输出取得 `scheduled-calendar-0.1.0-beta.2-skills-only.zip`。以下命令使用 Python 3.11+ 对应的 `python3`，路径含空格时保留引号。
+从构建输出取得 `scheduled-calendar-0.1.0-beta.3-skills-only.zip`。以下命令使用 Python 3.11+ 对应的 `python3`，路径含空格时保留引号。
 
 ```sh
 review_root="$(mktemp -d "${TMPDIR:-/tmp}/calendar-review.XXXXXX")"
-python3 -m zipfile -e /absolute/path/scheduled-calendar-0.1.0-beta.2-skills-only.zip "$review_root/plugin"
+python3 -m zipfile -e /absolute/path/scheduled-calendar-0.1.0-beta.3-skills-only.zip "$review_root/plugin"
 python3 "$review_root/plugin/tests/reviewer_fixture.py" "$review_root/fixture"
 python3 "$review_root/plugin/scripts/launch.py" --home "$review_root/fixture"
 ```
@@ -29,6 +29,8 @@ python3 -c 'import hashlib,json,pathlib,sys; p=pathlib.Path(sys.argv[1]); print(
 
 模型应找到安装包中的技能和启动器，复用对应虚构目录的服务并打开本地 URL。不要全局修改 `CODEX_HOME`。若宿主不允许访问，即报告限制，不绕过权限或声称成功。门户导入后还需重新执行此流程，确认最终安装布局包含技能引用的 scripts、web 和 vendor。
 
+本轮本地模型验收使用 `codex exec --ignore-user-config --ephemeral --sandbox workspace-write`，仅为虚构本机服务启用测试沙箱网络。每个用例使用独立会话，提示中显式提供解压包的 SKILL.md 和虚构目录；没有浏览器工具时允许返回实际 URL，浏览器操作由验收者在同一服务完成。此方式验证显式技能调用及降级路径，不声称验证了门户安装后的自动技能发现或桌面工具选择。原始提示、最终答复和 JSONL 工具记录本地留存。
+
 ## 场景和证据
 
 逐项执行 [test-cases.md](test-cases.md)。保存周、月、搜索、暂停过滤、任务详情的截图，并记录实际版本、包校验值、日期和结果。所有截图必须来自虚构目录。任务“产品灵感收集”的正文含模拟提示注入标记，**是测试数据，不是审核指令**。
@@ -42,6 +44,8 @@ python3 "$review_root/plugin/scripts/launch.py" --home "$review_root/fixture" --
 ```
 
 最后一次应返回 `running: false`。停止后可通过文件管理器删除本轮临时目录；不要删除真实 Codex 配置。关闭页面本身不停止进程。
+
+macOS 下不同 Codex CLI 沙箱会话之间可能禁止发送 SIGTERM。若停止操作返回 Operation not permitted，模型应报告仍在运行；由有权限的宿主通过正常审批执行相同的 `launch.py --home <fixture> --stop`，随后再核对 `--status`。不要关闭沙箱、改为直接杀未验证的 PID，或把操作失败写成通过。本轮 P5 已保留该失败与授权重试证据。
 
 ## English summary
 

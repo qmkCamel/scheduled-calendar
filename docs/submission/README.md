@@ -1,6 +1,6 @@
 # 官方目录提审材料
 
-状态：本地提审材料已准备，未上传 Platform、未完成安全扫描、未提交审核。目标为 Skills only；没有公共 MCP 服务。
+状态：beta.3 本地提审材料与场景验收已完成；关闭服务场景包含宿主权限批准后的重试。未上传 Platform、未完成官方安全扫描、未提交审核。目标为 Skills only；没有公共 MCP 服务。
 
 ## 文件
 
@@ -9,6 +9,8 @@
 - [test-cases.md](test-cases.md)：5 个正向和 3 个负向审核场景，包含预期及证据边界。
 - [publisher-checklist.md](publisher-checklist.md)：账号、身份、地区与最终声明。
 - [验证记录](verification.md)：本次包结构、测试和虚构数据验证结果。
+- [逐场景实际答复](evidence/model-results.json)：经路径和本机地址脱敏的模型结果，含初次问题与重试。
+- [最终包文件清单](evidence/package-manifest.json)：最终 ZIP 的校验值及 63 个文件的逐项哈希。
 - [条款](../../plugins/scheduled-calendar/TERMS.md)、[支持](../../plugins/scheduled-calendar/SUPPORT.md)、[隐私](../../plugins/scheduled-calendar/PRIVACY.md)。
 
 ## 生成上传文件

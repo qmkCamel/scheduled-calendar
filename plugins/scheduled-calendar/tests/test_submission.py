@@ -10,6 +10,7 @@ import zipfile
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / 'scripts'))
 from build_submission import build, ROOT
+from build_release import public_files
 from reviewer_fixture import create
 
 
@@ -25,6 +26,12 @@ class SubmissionTests(unittest.TestCase):
                 self.assertIn('skills/scheduled-calendar/SKILL.md', names)
                 self.assertNotIn('.agents/plugins/marketplace.json', names)
                 self.assertNotIn('assets/calendar-demo.png', names)
+                source_manifest = json.loads((ROOT / '.codex-plugin/plugin.json').read_text())
+                for screenshot in source_manifest['interface'].get('screenshots', []):
+                    self.assertNotIn(screenshot.removeprefix('./'), names)
+                runtime = {rel for _, rel in public_files(ROOT) if rel.startswith(('scripts/', 'web/', 'skills/'))}
+                self.assertEqual(runtime, {name for name in names if name.startswith(('scripts/', 'web/', 'skills/'))})
+                self.assertIn('web/i18n.js', names)
                 manifest = json.loads(z.read('.codex-plugin/plugin.json'))
                 self.assertNotIn('screenshots', manifest['interface'])
                 for field in ('logo', 'composerIcon'):

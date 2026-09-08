@@ -1,6 +1,13 @@
 # Changelog
 
-## Unreleased
+## 0.1.0-beta.3 — 双语提审候选包
+
+- 同步中英文界面与完整 i18n 运行文件，刷新目录说明。
+- 提审构建按 manifest 移除所有演示截图，保留品牌图标。
+- 校验所有运行文件均被打包，防止新增模块漏包；补充实际模型与浏览器审核场景证据。
+- 技能摘要必须注明周期预估时间；本地验收不等于官方安全扫描或目录审核通过。
+
+### 双语界面
 
 - Add English and Simplified Chinese UI, browser-language detection, and a persistent manual language selector.
 - Localize dates, system messages, task details, and task-management requests; keep user task text unchanged.
