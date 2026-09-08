@@ -1,0 +1,20 @@
+{
+  "name": "scheduled-calendar-community",
+  "interface": {
+    "displayName": "Scheduled Calendar Community"
+  },
+  "plugins": [
+    {
+      "name": "scheduled-calendar",
+      "source": {
+        "source": "local",
+        "path": "./plugins/scheduled-calendar"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

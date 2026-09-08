@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="calendar-token" content="__CALENDAR_TOKEN__">
+  <title>定时任务日历 · Codex</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <a class="brand" href="/" aria-label="定时任务日历首页"><span class="brand-icon">▦</span><span>日历<span class="brand-caption">FOR CODEX</span></span></a>
+    <div class="sidebar-heading">工作空间</div>
+    <button class="nav-item selected" id="calendar-nav"><span>▦</span> 定时任务日历</button>
+    <div class="mini-top"><strong id="mini-title"></strong><div><button id="mini-prev" aria-label="迷你日历上个月">‹</button><button id="mini-next" aria-label="迷你日历下个月">›</button></div></div>
+    <div class="mini-week"><span>一</span><span>二</span><span>三</span><span>四</span><span>五</span><span>六</span><span>日</span></div>
+    <div id="mini-grid" class="mini-grid"></div>
+    <div class="sidebar-heading spaced">任务状态</div>
+    <div class="filters" id="filters">
+      <button data-filter="ACTIVE" class="filter selected"><span class="dot green"></span>已开启<span id="active-count" class="count">—</span></button>
+      <button data-filter="PAUSED" class="filter"><span class="dot gray"></span>已暂停<span id="paused-count" class="count">—</span></button>
+      <button data-filter="COMPLETED" class="filter"><span class="dot purple"></span>已完成<span id="completed-count" class="count">—</span></button>
+      <button data-filter="ALL" class="filter"><span class="dot outline"></span>全部任务<span id="all-count" class="count">—</span></button>
+    </div>
+    <div class="source-card"><span class="source-led"></span><strong>本地任务已连接</strong><p id="source-text">正在读取任务…</p><span class="source-note">云端任务尚未接入</span></div>
+    <div class="sidebar-bottom">一个更清楚的时间视角<span>Scheduled Calendar · 0.1</span></div>
+  </aside>
+  <main>
+    <header class="page-header"><div><div class="eyebrow">YOUR AGENTS, ON SCHEDULE</div><h1>让每一项安排，一目了然<span class="title-dot">.</span></h1><p>把任务交给 Codex，把时间留给自己。</p></div><button id="refresh" class="button refresh">↻ <span>刷新</span></button></header>
+    <section class="overview" aria-label="安排概览">
+      <div><span class="metric-label">今日计划</span><strong id="today-count">—</strong><small>次计划触发</small></div>
+      <div><span class="metric-label">本周安排</span><strong id="week-count">—</strong><small>次计划触发</small></div>
+      <div class="next-metric"><span class="metric-label">下一项任务</span><strong id="next-title">正在读取…</strong><small id="next-time">—</small></div>
+    </section>
+    <div id="notice" role="status" class="notice" hidden></div>
+    <section class="calendar-shell">
+      <div class="toolbar"><div class="date-controls"><h2 id="range-title"></h2><span id="week-number" class="week-number"></span><button id="prev" class="icon-button" aria-label="上一期">‹</button><button id="next" class="icon-button" aria-label="下一期">›</button><button id="today" class="button today-button">今天</button></div><div class="view-switch" aria-label="日历视图"><button data-view="week" class="selected">周</button><button data-view="month">月</button><button data-view="agenda">日程</button></div></div>
+      <div class="sub-toolbar"><label class="search"><span>⌕</span><input id="search" placeholder="搜索任务…" aria-label="搜索任务"></label><select id="mobile-filter" aria-label="任务状态"><option value="ACTIVE">已开启</option><option value="PAUSED">已暂停</option><option value="COMPLETED">已完成</option><option value="ALL">全部任务</option></select><span id="zone" class="zone"></span></div>
+      <div id="monitor-lane" class="monitor-lane" hidden></div>
+      <div id="calendar" class="calendar" aria-live="polite"><div class="loading">正在读取你的安排…</div></div>
+      <footer class="calendar-footer"><span>● 调度器下一次　○ 周期预估</span><span class="coverage-label">仅本机 · 云端尚未接入</span><span id="sync-time">等待同步</span></footer>
+    </section>
+    <p class="fine-print">日历展示触发时间，不代表任务耗时。周期预估与历史日期不等于执行记录。</p>
+  </main>
+</div>
+<dialog id="details"><button id="close-details" class="close-button" aria-label="关闭详情">×</button><div id="details-content"></div></dialog>
+<script src="/app.js" defer></script>
+</body></html>

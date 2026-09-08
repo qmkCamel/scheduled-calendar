@@ -1,0 +1,39 @@
+{
+  "name": "scheduled-calendar",
+  "version": "0.1.0-beta.1",
+  "description": "以周、月和日程查看 Codex 本地定时任务。",
+  "author": {
+    "name": "Edge",
+    "url": "https://github.com/qmkCamel"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "定时任务日历",
+    "shortDescription": "把 Codex 的定时任务放进日历",
+    "longDescription": "周视图、月视图、任务详情、搜索和状态筛选。读取真实本地任务与调度时间，每 30 秒刷新。在 Codex 浏览器面板打开；云端任务尚未接入。",
+    "developerName": "Edge",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Read"
+    ],
+    "defaultPrompt": [
+      "打开定时任务日历",
+      "用日历看看本周的自动化安排",
+      "查看本月定时任务"
+    ],
+    "brandColor": "#487652",
+    "screenshots": [
+      "./assets/calendar-demo.png"
+    ]
+  },
+  "license": "MIT",
+  "keywords": [
+    "codex",
+    "calendar",
+    "automations",
+    "local-first"
+  ],
+  "homepage": "https://github.com/qmkCamel/scheduled-calendar",
+  "repository": "https://github.com/qmkCamel/scheduled-calendar"
+}
