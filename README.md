@@ -4,7 +4,7 @@
 
 **A calendar for your existing local Codex automations. No task migration needed.**
 
-[Download preview](https://github.com/qmkCamel/scheduled-calendar/releases) · [Usage guide (Chinese)](plugins/scheduled-calendar/README.md) · [Privacy](plugins/scheduled-calendar/PRIVACY.md) · [Report an issue](https://github.com/qmkCamel/scheduled-calendar/issues)
+[Download beta.3](https://github.com/qmkCamel/scheduled-calendar/releases/tag/v0.1.0-beta.3) · [Usage guide (Chinese)](plugins/scheduled-calendar/README.md) · [Privacy](plugins/scheduled-calendar/PRIVACY.md) · [Report an issue](https://github.com/qmkCamel/scheduled-calendar/issues)
 
 ![Month view with synthetic demo tasks](plugins/scheduled-calendar/assets/calendar-demo-en.png)
 
@@ -18,16 +18,16 @@
 
 ## Installation
 
-**Preview requirements: macOS, Python 3.11+, and a plugin-capable Codex CLI/desktop app.** The calendar supports English and Simplified Chinese. It follows your browser’s primary language (other languages fall back to English); use the language menu to override it. The preference is saved for the current browser origin. Task names and instructions stay in their original language. This language support is available in the source checkout; the pinned v0.1.0-beta.1 release below still has the Chinese-only UI.
+**Preview requirements: macOS, Python 3.11+, and a plugin-capable Codex CLI/desktop app.** The beta.3 release supports English and Simplified Chinese. It follows your browser’s primary language (other languages fall back to English); use the language menu to override it. The preference is saved for the current browser origin. Task names and instructions stay in their original language.
 
 ```sh
-codex plugin marketplace add qmkCamel/scheduled-calendar --ref v0.1.0-beta.1
+codex plugin marketplace add qmkCamel/scheduled-calendar --ref v0.1.0-beta.3
 codex plugin add scheduled-calendar@scheduled-calendar-community
 ```
 
 Then start a new Codex task and ask: **“Open the scheduled calendar.”**
 
-Alternatively, download the release ZIP, extract it to a permanent directory, run `codex plugin marketplace add .` from that directory, and run the same plugin installation command above. Recurrence dependencies are bundled; no `pip install` is needed.
+Alternatively, download `scheduled-calendar-0.1.0-beta.3.zip` and `SHA256SUMS` from the release page. Run `shasum -a 256 -c SHA256SUMS` in the download directory, extract the ZIP to a permanent directory, and enter `scheduled-calendar-0.1.0-beta.3/`. Run `codex plugin marketplace add .` there, followed by the same plugin installation command above. Recurrence dependencies are bundled; no `pip install` is needed.
 
 You can also launch the calendar directly from the extracted root without installing the Codex plugin:
 

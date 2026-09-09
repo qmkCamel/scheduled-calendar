@@ -4,7 +4,7 @@
 
 **给已有 Codex 本地定时任务补一个日历，无需迁移任务。**
 
-[下载预览版](https://github.com/qmkCamel/scheduled-calendar/releases) · [使用说明](plugins/scheduled-calendar/README.md) · [隐私说明](plugins/scheduled-calendar/PRIVACY.md) · [反馈问题](https://github.com/qmkCamel/scheduled-calendar/issues)
+[下载 beta.3](https://github.com/qmkCamel/scheduled-calendar/releases/tag/v0.1.0-beta.3) · [使用说明](plugins/scheduled-calendar/README.md) · [隐私说明](plugins/scheduled-calendar/PRIVACY.md) · [反馈问题](https://github.com/qmkCamel/scheduled-calendar/issues)
 
 ![月视图，使用虚构演示数据](plugins/scheduled-calendar/assets/calendar-demo-zh-CN.png)
 
@@ -18,16 +18,16 @@
 
 ## 安装
 
-**预览版要求：macOS、Python 3.11+、支持插件的 Codex CLI/桌面应用。** 界面支持英文和简体中文，默认跟随浏览器首选语言（其他语言回退英文），可从顶部语言菜单手动切换；偏好保存在当前浏览器来源中。任务名称与正文保留原文。双语功能已在当前源码中实现；下方固定安装的 v0.1.0-beta.1 发行版仍为中文界面。
+**预览版要求：macOS、Python 3.11+、支持插件的 Codex CLI/桌面应用。** beta.3 发行版支持英文和简体中文，默认跟随浏览器首选语言（其他语言回退英文），可从顶部语言菜单手动切换；偏好保存在当前浏览器来源中。任务名称与正文保留原文。
 
 ```sh
-codex plugin marketplace add qmkCamel/scheduled-calendar --ref v0.1.0-beta.1
+codex plugin marketplace add qmkCamel/scheduled-calendar --ref v0.1.0-beta.3
 codex plugin add scheduled-calendar@scheduled-calendar-community
 ```
 
 然后新建一个 Codex 任务，说：**“打开定时任务日历”**。
 
-也可以下载发行版 ZIP，解压到固定目录，在该目录执行 `codex plugin marketplace add .`，再运行相同的插件安装命令。ZIP 内已包含周期解析依赖，无需 `pip install`。
+也可以从发行页下载 `scheduled-calendar-0.1.0-beta.3.zip` 和 `SHA256SUMS`，在下载目录运行 `shasum -a 256 -c SHA256SUMS` 校验。将 ZIP 解压到固定位置，进入 `scheduled-calendar-0.1.0-beta.3/`，执行 `codex plugin marketplace add .`，再运行相同的插件安装命令。ZIP 内已包含周期解析依赖，无需 `pip install`。
 
 如果尚未安装 Codex 插件，也可在解压根目录直接运行：
 

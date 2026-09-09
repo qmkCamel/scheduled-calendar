@@ -1,6 +1,9 @@
 # Changelog
 
-## 0.1.0-beta.3 — 双语提审候选包
+## 0.1.0-beta.3 — 双语社区预览版与提审候选包
+
+- 发布完整的社区市场安装包及 SHA-256 校验文件，同步中英文安装入口。
+- Ship the complete community marketplace ZIP and SHA-256 checksum with matching English and Chinese installation instructions.
 
 - 同步中英文界面与完整 i18n 运行文件，刷新目录说明。
 - 提审构建按 manifest 移除所有演示截图，保留品牌图标。
