@@ -19,4 +19,11 @@
 - SHA-256：`6fb20c1e2944a5c4f9461bf5feeb19af453efcd01a11366388ee2e5fdaa93319`
 - 附件：ZIP 与 `SHA256SUMS`。
 
-公开发布、Git tag 和远端下载校验结果在发布后补记。
+## 公开发布结果
+
+- [GitHub 预发布](https://github.com/qmkCamel/scheduled-calendar/releases/tag/v0.1.0-beta.3) 已公开：`isDraft=false`、`isPrerelease=true`，发布时间为 2026-09-09 04:58:42 UTC。
+- `v0.1.0-beta.3` tag 对应提交 `eea73223ae4dfc1ba872b25c0375368761fb147e`。
+- 从 GitHub 重新下载 ZIP 与 SHA256SUMS，二者均与本地构建逐字节一致，`shasum -a 256 -c SHA256SUMS` 返回 OK；GitHub 返回的资产摘要也与上面的 SHA-256 一致。
+- 在另一个隔离配置目录按 README 执行 GitHub marketplace 添加命令与插件安装命令，实际版本为 `0.1.0-beta.3`，安装目录的插件文件与发布源码逐字节一致。
+- GitHub Topics 已回读确认：`automation`、`calendar`、`codex`、`codex-plugin`、`local-first`。
+- 未修改日历运行代码、现有个人插件安装或旧 beta.1 发行资产；未提交官方目录，也未发布社区宣传帖。
